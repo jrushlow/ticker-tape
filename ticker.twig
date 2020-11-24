@@ -1,0 +1,11 @@
+<div class="ticker-container" id="blog-ticker-container">
+    <div class="ticker-tape" id="blog-ticker">
+        <div class="ticker-content">
+            {% for post in posts %}
+                <div class="ticker-item">
+                    <a href="#" class="ticker-link"><span>{{ post.title }}</span></a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

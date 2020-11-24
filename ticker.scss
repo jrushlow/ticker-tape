@@ -1,0 +1,50 @@
+.ticker-container {
+  width: 100%;
+  height: 2.5rem;
+  margin: 0 auto 0;
+
+  .ticker-tape {
+    overflow: hidden;
+    white-space: nowrap;
+
+    .ticker-content {
+      display: table-cell;
+      position: relative;
+      animation: blog-ticker-tape 29.2s linear infinite running;
+
+      .ticker-item {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 2.5rem;
+
+        .ticker-link {
+          display: inline-block;
+          padding: 0 1.25rem;
+          text-decoration: none;
+          outline: 0;
+        }
+
+        .ticker-link:hover {
+          color: blue;
+        }
+      }
+
+      .ticker-item:after {
+        overflow: hidden;
+        text-indent: -9999rem;
+        font-size: 0;
+        line-height: 0;
+        content: "|";
+        display: inline-block;
+        height: 1.875rem;
+        margin-bottom: 0.1875rem;
+        border-right: 1px solid orange;
+        vertical-align: middle;
+      }
+    }
+
+    .ticker-content:hover {
+      animation-play-state: paused;
+    }
+  }
+}
